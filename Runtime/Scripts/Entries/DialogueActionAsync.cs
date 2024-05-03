@@ -15,7 +15,7 @@ namespace HHG.DialogueSystem.Runtime
         {
             foreach (IActionAsync action in actions)
             {
-                yield return runner.StartCoroutine(action?.DoAction(runner));
+                yield return runner.StartCoroutine(action?.DoActionAsync(runner));
             }
         }
     }

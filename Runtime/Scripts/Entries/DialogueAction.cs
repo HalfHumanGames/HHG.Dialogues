@@ -8,7 +8,7 @@ namespace HHG.DialogueSystem.Runtime
     [Serializable]
     public class DialogueAction : DialogueEntryBase
     {
-        [SerializeField] private ActionEvent action;
+        [SerializeField] private ActionEvent action = new ActionEvent();
 
         public override IEnumerator Run(DialogueRunner runner)
         {

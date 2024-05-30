@@ -9,7 +9,7 @@ namespace HHG.DialogueSystem.Runtime
         [SerializeField] private string value;
         [SerializeField] private bool append;
 
-        public void DoAction(MonoBehaviour invoker)
+        public void Invoke(MonoBehaviour invoker)
         {
             if (append)
             {

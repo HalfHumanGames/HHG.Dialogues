@@ -9,7 +9,7 @@ namespace HHG.DialogueSystem.Runtime
         [SerializeField] private int value;
         [SerializeField] private bool relative;
 
-        public void DoAction(MonoBehaviour invoker)
+        public void Invoke(MonoBehaviour invoker)
         {
             if (relative)
             {

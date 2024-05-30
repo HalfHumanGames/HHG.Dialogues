@@ -8,7 +8,7 @@ namespace HHG.DialogueSystem.Runtime
         [SerializeField] private DialogueBoolAsset variable;
         [SerializeField] private bool value;
 
-        public void DoAction(MonoBehaviour invoker)
+        public void Invoke(MonoBehaviour invoker)
         {
             Locator.Get<DialogueRunner>()?.SetVariable(variable.name, value);
         }

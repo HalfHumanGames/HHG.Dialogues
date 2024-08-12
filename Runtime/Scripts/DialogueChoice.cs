@@ -16,8 +16,8 @@ namespace HHG.DialogueSystem.Runtime
         [SerializeField, HideInInspector] private string id = Guid.NewGuid().ToString();
         [SerializeField, TextArea] private string text;
         [SerializeField] private DialogueAsset destination;
-        [SerializeReference, SerializeReferenceDropdown] private List<IRequirement> requirements = new List<IRequirement>();
-        [SerializeReference, SerializeReferenceDropdown] private List<IActionAsync> actions = new List<IActionAsync>();
+        [SerializeReference, SubclassSelector] private List<IRequirement> requirements = new List<IRequirement>();
+        [SerializeReference, SubclassSelector] private List<IActionAsync> actions = new List<IActionAsync>();
 
         private string interpolated;
 

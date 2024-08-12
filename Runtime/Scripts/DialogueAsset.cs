@@ -8,6 +8,6 @@ namespace HHG.DialogueSystem.Runtime
     {
         public IReadOnlyList<DialogueEntryBase> Entries => entries;
 
-        [SerializeReference, SerializeReferenceDropdown] private List<DialogueEntryBase> entries = new List<DialogueEntryBase>();
+        [SerializeReference, SubclassSelector] private List<DialogueEntryBase> entries = new List<DialogueEntryBase>();
     }
 }

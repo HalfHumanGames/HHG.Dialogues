@@ -20,7 +20,7 @@
   "dependencies": {
     "com.unity.textmeshpro": "3.0.8",
     "com.unity.inputsystem": "1.8.1",
-    "com.alexeytaranov.serializereferencedropdown": "0.4.0",
+    "com.mackysoft.serializereference-extensions": "1.4.0",
     "com.halfhumangames.common": "1.0.0"
   }
 }

@@ -21,7 +21,12 @@ namespace HHG.DialogueSystem.Runtime
 
         public bool IsRequirementMet(MonoBehaviour invokerv)
         {
-            string s = Locator.Get<DialogueRunner>().GetVariable<string>(variable.name);
+            string s = string.Empty;
+
+            if (Locator.TryGet(out DialogueRunner runner))
+            {
+                s = runner.GetVariable<string>(variable.name);
+            }
 
             switch (compare)
             {

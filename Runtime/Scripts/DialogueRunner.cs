@@ -30,8 +30,6 @@ namespace HHG.DialogueSystem.Runtime
             LoadVariables<DialogueFloatAsset>();
             LoadVariables<DialogueIntAsset>();
             LoadVariables<DialogueStringAsset>();
-
-            //RunDialogue("1_Intro");
         }
 
         public void SetVariable(string key, object value)

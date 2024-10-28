@@ -11,14 +11,10 @@ namespace HHG.DialogueSystem.Runtime
 
         public void Invoke(MonoBehaviour invoker)
         {
-            if (relative)
+            if (Locator.TryGet(out DialogueRunner runner))
             {
-                int i = Locator.Get<DialogueRunner>().GetVariable<int>(variable.name);
-                Locator.Get<DialogueRunner>()?.SetVariable(variable.name, i + value);
-            }
-            else
-            {
-                Locator.Get<DialogueRunner>()?.SetVariable(variable.name, value);
+                int newValue = relative ? runner.GetVariable<int>(variable.name) + value : value;
+                runner.SetVariable(variable.name, newValue);
             }
         }
     }

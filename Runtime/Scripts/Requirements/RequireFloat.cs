@@ -23,7 +23,12 @@ namespace HHG.DialogueSystem.Runtime
 
         public bool IsRequirementMet(MonoBehaviour invoker)
         {
-            float f = Locator.Get<DialogueRunner>().GetVariable<float>(variable.name);
+            float f = 0f;
+
+            if (Locator.TryGet(out DialogueRunner runner))
+            {
+                f = runner.GetVariable<float>(variable.name);
+            }
 
             switch (compare)
             {

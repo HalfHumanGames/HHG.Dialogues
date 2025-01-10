@@ -12,7 +12,7 @@ namespace HHG.DialogueSystem.Runtime
 
         public override IEnumerator Run(DialogueRunner runner)
         {
-            return action.InvokeRoutine(runner);
+            return action.InvokeAsync(runner);
         }
     }
 }

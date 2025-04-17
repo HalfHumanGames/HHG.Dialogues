@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace HHG.DialogueSystem.Runtime
+namespace HHG.Dialogues.Runtime
 {
     public class DialogueRunner : MonoBehaviour
     {

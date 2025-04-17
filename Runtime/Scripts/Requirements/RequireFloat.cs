@@ -2,7 +2,7 @@ using HHG.Common.Runtime;
 using System;
 using UnityEngine;
 
-namespace HHG.DialogueSystem.Runtime
+namespace HHG.Dialogues.Runtime
 {
     [Serializable]
     public class RequireFloat : IRequirement
@@ -30,16 +30,16 @@ namespace HHG.DialogueSystem.Runtime
                 f = runner.GetVariable<float>(variable.name);
             }
 
-            switch (compare)
+            return compare switch
             {
-                case Compare.Equals: return value == f;
-                case Compare.NotEquals: return value == f;
-                case Compare.GreaterThan: return value == f;
-                case Compare.GreaterThanOrEquals: return value == f;
-                case Compare.LessThan: return value == f;
-                case Compare.LessThanOrEquals: return value == f;
-                default: return false;
-            }
+                Compare.Equals => value == f,
+                Compare.NotEquals => value != f,
+                Compare.GreaterThan => value > f,
+                Compare.GreaterThanOrEquals => value >= f,
+                Compare.LessThan => value < f,
+                Compare.LessThanOrEquals => value <= f,
+                _ => true,
+            };
         }
     }
 }

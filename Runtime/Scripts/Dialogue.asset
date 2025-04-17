@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2893d18bc428824e9f21281efd4a1b6, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  entries:
+  - rid: 8327615447234773017
+  - rid: 8327615447234773018
+  references:
+    version: 2
+    RefIds:
+    - rid: 8327615447234773017
+      type: {class: DialogueLine, ns: HHG.Dialogues.Runtime, asm: HHG.Dialogues.Runtime}
+      data:
+        _: 
+        id: 1ac3306b-42f7-4068-9744-7a58309d05c9
+        character: {fileID: 0}
+        alignment: 0
+        text: 
+        actions:
+          actions:
+          - rid: 8327615447234773019
+    - rid: 8327615447234773018
+      type: {class: DialogueQuestion, ns: HHG.Dialogues.Runtime, asm: HHG.Dialogues.Runtime}
+      data:
+        _: 
+        id: 9a9a1d09-a78a-4f61-a03e-2833674250bc
+        character: {fileID: 0}
+        alignment: 0
+        text: 
+        choices:
+        - id: 
+          text: 
+          destination: {fileID: 0}
+          requirements:
+          - rid: 8327615447234773020
+          actions:
+            actions: []
+    - rid: 8327615447234773019
+      type: {class: ActionPlaySound, ns: HHG.Audio.Runtime, asm: HHG.Audio.Runtime}
+      data:
+        sound: {fileID: 0}
+        playAtTransform: 0
+    - rid: 8327615447234773020
+      type: {class: RequireInt, ns: HHG.Dialogues.Runtime, asm: HHG.Dialogues.Runtime}
+      data:
+        variable: {fileID: 0}
+        value: 0
+        compare: 0

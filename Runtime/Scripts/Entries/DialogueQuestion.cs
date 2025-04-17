@@ -2,14 +2,14 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace HHG.DialogueSystem.Runtime
+namespace HHG.Dialogues.Runtime
 {
     [Serializable]
     public class DialogueQuestion : DialogueTextBase
     {
-        public DialogueChoice[] Choices => choices;
+        public IReadOnlyList<DialogueChoice> Choices => choices;
 
-        [SerializeField] private DialogueChoice[] choices;
+        [SerializeField, IgnoreParent] private List<DialogueChoice> choices = new List<DialogueChoice>();
 
         protected override void Interpolate(IReadOnlyDictionary<string, object> vars)
         {

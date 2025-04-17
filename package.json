@@ -1,13 +1,13 @@
 {
-  "name": "com.halfhumangames.dialoguesystem",
+  "name": "com.halfhumangames.dialogues",
   "version": "1.0.0",
-  "displayName": "HHG - Dialogue System",
+  "displayName": "HHG - Dialogues",
   "description": "Dialogue system for Unity",
   "unity": "2020.3",
   "unityRelease": "6f1",
-  "documentationUrl": "https://github.com/HalfHumanGames/HHG.DialogueSystem/blob/main/README.md",
-  "changelogUrl": "https://github.com/HalfHumanGames/HHG.DialogueSystem/blob/main/CHANGELOG.md",
-  "licensesUrl": "https://github.com/HalfHumanGames/HHG.DialogueSystem/blob/main/LICENSE",
+  "documentationUrl": "https://github.com/HalfHumanGames/HHG.Dialogues/blob/main/README.md",
+  "changelogUrl": "https://github.com/HalfHumanGames/HHG.Dialogues/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/HalfHumanGames/HHG.Dialogues/blob/main/LICENSE",
   "keywords": [
     "Dialogue",
     "Element"

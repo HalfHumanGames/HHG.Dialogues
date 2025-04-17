@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-namespace HHG.DialogueSystem.Runtime
+namespace HHG.Dialogues.Runtime
 {
     public class UIDialogue : MonoBehaviour
     {

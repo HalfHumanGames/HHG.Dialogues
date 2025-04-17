@@ -2,7 +2,7 @@ using HHG.Common.Runtime;
 using System;
 using UnityEngine;
 
-namespace HHG.DialogueSystem.Runtime
+namespace HHG.Dialogues.Runtime
 {
     [Serializable]
     public class RequireBool : IRequirement

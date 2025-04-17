@@ -2,7 +2,7 @@ using HHG.Common.Runtime;
 using System;
 using UnityEngine;
 
-namespace HHG.DialogueSystem.Runtime
+namespace HHG.Dialogues.Runtime
 {
     [Serializable]
     public class RequireString : IRequirement
@@ -28,14 +28,14 @@ namespace HHG.DialogueSystem.Runtime
                 s = runner.GetVariable<string>(variable.name);
             }
 
-            switch (compare)
+            return compare switch
             {
-                case Compare.Equals: return value == s;
-                case Compare.NotEquals: return value != s;
-                case Compare.Contains: return value.Contains(s);
-                case Compare.NotContains: return value.Contains(s);
-                default: return false;
-            }
+                Compare.Equals => value == s,
+                Compare.NotEquals => value != s,
+                Compare.Contains => value.Contains(s),
+                Compare.NotContains => !value.Contains(s),
+                _ => true,
+            };
         }
     }
 }

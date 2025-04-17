@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-namespace HHG.DialogueSystem.Runtime
+namespace HHG.Dialogues.Runtime
 {
     [Serializable]
     public abstract class DialogueEntryBase

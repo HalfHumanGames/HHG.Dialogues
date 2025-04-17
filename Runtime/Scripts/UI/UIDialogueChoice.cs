@@ -2,7 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-namespace HHG.DialogueSystem.Runtime
+namespace HHG.Dialogues.Runtime
 {
     public class UIDialogueChoice : MonoBehaviour
     {

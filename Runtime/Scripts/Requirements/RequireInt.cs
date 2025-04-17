@@ -2,7 +2,7 @@ using HHG.Common.Runtime;
 using System;
 using UnityEngine;
 
-namespace HHG.DialogueSystem.Runtime
+namespace HHG.Dialogues.Runtime
 {
     [Serializable]
     public class RequireInt : IRequirement
@@ -30,16 +30,16 @@ namespace HHG.DialogueSystem.Runtime
                 i = runner.GetVariable<int>(variable.name);
             }
 
-            switch (compare)
+            return compare switch
             {
-                case Compare.Equals: return value == i;
-                case Compare.NotEquals: return value == i;
-                case Compare.GreaterThan: return value == i;
-                case Compare.GreaterThanOrEquals: return value == i;
-                case Compare.LessThan: return value == i;
-                case Compare.LessThanOrEquals: return value == i;
-                default: return false;
-            }
+                Compare.Equals => value == i,
+                Compare.NotEquals => value != i,
+                Compare.GreaterThan => value > i,
+                Compare.GreaterThanOrEquals => value >= i,
+                Compare.LessThan => value < i,
+                Compare.LessThanOrEquals => value <= i,
+                _ => true,
+            };
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace HHG.DialogueSystem.Runtime
+namespace HHG.Dialogues.Runtime
 {
     [Serializable]
     public class DialogueChoice
@@ -17,7 +17,7 @@ namespace HHG.DialogueSystem.Runtime
         [SerializeField, TextArea] private string text;
         [SerializeField] private DialogueAsset destination;
         [SerializeReference, SubclassSelector] private List<IRequirement> requirements = new List<IRequirement>();
-        [SerializeReference, SubclassSelector] private List<IActionAsync> actions = new List<IActionAsync>();
+        [SerializeField, Unfold] private ActionEvent actions;
 
         private string interpolated;
 

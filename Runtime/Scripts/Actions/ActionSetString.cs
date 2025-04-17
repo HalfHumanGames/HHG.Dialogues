@@ -1,7 +1,7 @@
 using HHG.Common.Runtime;
 using UnityEngine;
 
-namespace HHG.DialogueSystem.Runtime
+namespace HHG.Dialogues.Runtime
 {
     public class ActionSetString : IAction
     {

@@ -4,15 +4,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace HHG.DialogueSystem.Runtime
+namespace HHG.Dialogues.Runtime
 {
     [Serializable]
     public abstract class DialogueTextBase : DialogueEntryBase
     {
         public CharacterAsset Character => character;
+        public Alignment Alignment => alignment;
         public string Text => interpolated;
 
         [SerializeField] private CharacterAsset character;
+        [SerializeField] Alignment alignment;
         [SerializeField, TextArea] private string text;
 
         private string interpolated;
